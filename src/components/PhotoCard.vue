@@ -1,0 +1,73 @@
+<template>
+  <div class="outer">
+    <div class="inner">
+      <img :src="photo.smallSrc" :alt="photo.title">
+      <router-link :to="photoLink">
+        <div class="overlay">
+          <h3>{{ photo.title }}</h3>
+          <p>Taken in {{ photo.country }}</p>
+        </div>
+      </router-link>
+    </div>
+  </div>
+</template>
+
+<script>
+import PhotoData from '@/photoData.json'
+
+export default {
+  name: 'PhotoCard',
+  props: ['id'],
+  computed: {
+    photoLink () {
+      return `/photo/${this.id}`
+    },
+    photo () {
+      const photoId = this.id
+      return PhotoData.filter(photo => photo.id === photoId)[0]
+    }
+  }
+}
+</script>
+
+<style scoped>
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.outer {
+  margin-bottom: 1rem;
+  border: 1px solid var(--color__background);
+  border-radius: 2px;
+  background-size: cover;
+  cursor: pointer;
+  break-inside: avoid;
+  position: relative;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  margin-bottom: -2px;
+  border-radius: 2px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+  background-color: var(--color__secondary);
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+  color: var(--color__primary_text);
+}
+
+.overlay:hover {
+  opacity: 0.8;
+}
+</style>

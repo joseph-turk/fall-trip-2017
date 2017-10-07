@@ -1,0 +1,75 @@
+<template>
+  <div id="app">
+    <my-header/>
+    <router-view></router-view>
+  </div>
+</template>
+
+<script>
+import MyHeader from '@/components/Header'
+import MyFooter from '@/components/Footer'
+
+export default {
+  name: 'app',
+  components: {
+    MyHeader,
+    MyFooter
+  }
+}
+</script>
+
+<style>
+:root {
+  /* --color__primary: #A8B7CA; */
+  --color__primary: #1C6BAB;
+  --color__primary_text: #333;
+  --color__secondary: lightgray;
+  --color__background: #F2F2F2;
+  --color__success: #6FCF97;
+}
+
+body {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  background-color: var(--color__background);
+  color: var(--color__primary_text);
+}
+
+@media (min-width: 800px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+h2 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+p {
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 1rem;
+  margin: auto;
+}
+
+main {
+  padding-top: 80px;
+  padding-bottom: 4rem;
+}
+
+.nav-buttons {
+  margin: 2rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+</style>
