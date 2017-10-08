@@ -13,7 +13,7 @@
     </country-content>
 
     <country-content>
-      We got lunch at a traditional pub and then walked over to the Guinness Storehouse. The Storehouse was a weird place — pretty cool to see, but also not realy a brewery. Still, getting a pint at the top-floor bar with 360° views of Dublin was great.
+      We got lunch at a traditional pub and then walked over to the Guinness Storehouse. The Storehouse was a weird place—pretty cool to see, but also not realy a brewery. Still, getting a pint at the top-floor bar with 360° views of Dublin was great.
     </country-content>
 
     <country-content>
@@ -23,7 +23,7 @@
     <photo-with-caption id="10"/>
     
     <country-content>
-      We spent Thursday morning bumming around Dublin before leaving for Belfast. We had an Irish breakfast — I tried black pudding, and it wasn't awful — and walked around the Trinity College area. We then caught our bus to Belfast.
+      We spent Thursday morning bumming around Dublin before leaving for Belfast. We had an Irish breakfast—I tried black pudding, and it wasn't awful—and walked around the Trinity College area. We then caught our bus to Belfast.
     </country-content>
 
     <country-subheading>Belfast</country-subheading>

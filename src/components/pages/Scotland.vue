@@ -8,7 +8,7 @@
 
     <country-subheading>Edinburgh to Oban</country-subheading>
 
-    <country-content>
+    <country-content dropCap="true">
       Saturday was another travel day. We had a 6:50 AM flight from Belfast to Edinburgh. The plane was a fairly normal size, but it was a propeller plane rather than a jet, which was a little weird. We picked up our rental car at the Edinburgh airport.
     </country-content>
 
@@ -34,7 +34,7 @@
 
     <country-subheading>Inverness</country-subheading>
 
-    <country-content>
+    <country-content dropCap="true">
       On Sunday, we drove from Oban up to Inverness. Most of the drive was along the shore of Loch Ness, which was beautiful. The drive was much easier than the first day, partly due to being used to it, but also from not having an early morning flight to start the day.
     </country-content>
 
@@ -48,7 +48,7 @@
 
     <country-subheading>Skye</country-subheading>
 
-    <country-content>
+    <country-content dropCap="true">
       We drove from Inverness to Skye on Monday. Again, the countryside was breathtaking, adn we stopped often. It rained off and on all day, but we still made the most of time out of the car.
     </country-content>
 
@@ -78,7 +78,7 @@
 
     <country-subheading>Edinburgh</country-subheading>
 
-    <country-content>
+    <country-content dropCap="true">
       We drove from Skye back to Edinburgh on Wednesday. It was the longest day of driving we did the whole trip—about five hours if we hadn't stopped. Everything went OK on the drive, but both Alison and I could feel the tension mounting as we got closer to returning the car. But the return went smoothly, and we felt relieved to no longer have the car.
     </country-content>
 

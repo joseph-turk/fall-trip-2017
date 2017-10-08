@@ -8,8 +8,8 @@
 
     <country-subheading>London</country-subheading>
 
-    <country-content>
-      Thursday, our last real day of the trip, we took a train from Edinburgh down to London. It was a bit of a long ride, but it was nice to not be driving for a change. And we got in to London shortly after 1:00 PM — easily the earliest we got in to any city on the trip.
+    <country-content dropCap="true">
+      Thursday, our last real day of the trip, we took a train from Edinburgh down to London. It was a bit of a long ride, but it was nice to not be driving for a change. And we got in to London shortly after 1:00 PM—easily the earliest we got in to any city on the trip.
     </country-content>
 
     <country-content>
@@ -33,7 +33,7 @@
     </country-content>
 
     <country-content>
-      By the time we were heading away from Westminster, both Alison and I were getting extremely tired — we'd been up since 6:15 that morning and had walked about 5 miles already. So we decided to just start heading back to the hotel, with a plan for dinner on the way.
+      By the time we were heading away from Westminster, both Alison and I were getting extremely tired—we'd been up since 6:15 that morning and had walked about 5 miles already. So we decided to just start heading back to the hotel, with a plan for dinner on the way.
     </country-content>
 
     <country-content>
@@ -41,7 +41,7 @@
     </country-content>
 
     <country-content>
-      It turned out to be the oldest north Indian restaurantin the UK — opened in 1947. The service was pretty bad, but the food was great! I got Chicken Madras and Alison got Tandoori Chicken. The waiter double-checked with me that I would be OK with the spice level of my dish (the menu called the sauce "fiery"), which is always a good sign.
+      It turned out to be the oldest north Indian restaurantin the UK—opened in 1947. The service was pretty bad, but the food was great! I got Chicken Madras and Alison got Tandoori Chicken. The waiter double-checked with me that I would be OK with the spice level of my dish (the menu called the sauce "fiery"), which is always a good sign.
     </country-content>
 
     <country-content>
