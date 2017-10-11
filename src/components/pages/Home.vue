@@ -8,20 +8,22 @@
       <h2>Alison and Joe's Fall Trip</h2>
 
       <div class="button-container">
-        <router-link to="/photos" class="button">
-          View Pictures
-        </router-link>
-        <router-link to="/ireland" class="button button-primary">
-          Start Tour
-        </router-link>
+        <router-link-button slot="first-button"
+                            to="/photos">View Photos</router-link-button>
+        <router-link-button slot="second-button"
+                            to="/ireland"
+                            type="primary">Start Tour</router-link-button>
       </div>
     </div>
   </main>
 </template>
 
 <script>
+import RouterLinkButton from '@/components/RouterLinkButton.vue'
+
 export default {
-  name: 'home'
+  name: 'home',
+  components: { RouterLinkButton }
 }
 </script>
 
