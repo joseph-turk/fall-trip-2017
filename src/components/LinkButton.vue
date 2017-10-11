@@ -23,6 +23,10 @@ a:hover {
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+a:active {
+  box-shadow: none;
+}
+
 .primary {
   background-color: var(--color__primary);
   color: var(--color__background);
