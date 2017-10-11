@@ -1,5 +1,5 @@
 <template>
-  <div class="city-hero" :style="{ backgroundImage: `url('${image}')`}">
+  <div class="hero" :style="{ backgroundImage: `url('${photo.smallSrc}')`}">
     <div class="hero-overlay"></div>
     <div class="hero-container">
       <h2><slot>City</slot></h2>
@@ -8,9 +8,17 @@
 </template>
 
 <script>
+import PhotoData from '@/photoData.json'
+
 export default {
   name: 'CountryHero',
-  props: ['image']
+  props: ['id'],
+  computed: {
+    photo () {
+      const photoId = parseInt(this.id)
+      return PhotoData.filter(photo => photo.id === photoId)[0]
+    }
+  }
 }
 </script>
 
@@ -26,12 +34,7 @@ h2 {
   }
 }
 
-.city-content {
-  background: var(--color__background);
-  padding: 2rem 0;
-}
-
-.city-hero {
+.hero {
   margin-top: -1rem;
   margin-bottom: 2rem;
   height: 75vh;
@@ -43,7 +46,7 @@ h2 {
   position: relative;
 }
 
-.city-hero .hero-container {
+.hero .hero-container {
   z-index: 2;
   max-width: 1200px;
   padding: 0 1rem;
