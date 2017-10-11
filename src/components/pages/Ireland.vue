@@ -1,6 +1,6 @@
 <template>
   <main>
-    <country-hero :image="image">Ireland</country-hero>
+    <country-hero :image="image" id="9">Ireland</country-hero>
 
     <country-content>
       We spent three nights in Ireland: one in the Republic of Ireland (Dublin) and then two in Northern Ireland (Belfast). 
@@ -19,8 +19,6 @@
     <country-content>
       We checked in to our hostel after doing Guinness and headed out for an early dinner. It was only around 5:00, but we'd been up since the previous morning and were getting hit with jet lag pretty hard. We got fish and chips at a semi-cafeteria style place. It was fine, but we were too tired to really pay much attention to it.
     </country-content>
-
-    <photo-with-caption id="10"/>
     
     <country-content>
       We spent Thursday morning bumming around Dublin before leaving for Belfast. We had an Irish breakfast—I tried black pudding, and it wasn't awful—and walked around the Trinity College area. We then caught our bus to Belfast.
@@ -29,7 +27,7 @@
     <country-subheading>Belfast</country-subheading>
 
     <country-content dropCap="true">
-      We walked around a bit more once we got to Belfast, including going to check out their public library. The library reminded us a lot of Philadelphia – a really cool old building from the outside, but just a normal library on the inside.
+      We walked around a bit more once we got to Belfast, including going to check out their public library. The library reminded us a lot of Philadelphia—a really cool old building from the outside, but just a normal library on the inside.
     </country-content>
 
     <country-content>

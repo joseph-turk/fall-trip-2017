@@ -1,6 +1,6 @@
 <template>
   <main>
-    <country-hero :image="image">England</country-hero>
+    <country-hero :image="image" id="13">England</country-hero>
 
     <country-content>
       We ended our trip in England—London, to be specific. We had only one night there, but it was still amazing.

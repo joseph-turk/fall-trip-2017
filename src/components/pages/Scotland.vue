@@ -1,6 +1,6 @@
 <template>
   <main>
-    <country-hero :image="image">Scotland</country-hero>
+    <country-hero :image="image" id="2">Scotland</country-hero>
 
     <country-content>
       We spent most of the trip in Scotland, starting and ending in Edinburgh with a tour of the highlands in between.
@@ -49,7 +49,7 @@
     <country-subheading>Skye</country-subheading>
 
     <country-content dropCap="true">
-      We drove from Inverness to Skye on Monday. Again, the countryside was breathtaking, adn we stopped often. It rained off and on all day, but we still made the most of time out of the car.
+      We drove from Inverness to Skye on Monday. Again, the countryside was breathtaking, and we stopped often. It rained off and on all day, but we still made the most of time out of the car.
     </country-content>
 
     <country-content>
