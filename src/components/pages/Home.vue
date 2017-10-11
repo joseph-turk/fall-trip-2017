@@ -54,6 +54,7 @@ h2 {
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
+  text-shadow: 0 0 4px var(--color__primary_text);
 }
 
 .button-container {
