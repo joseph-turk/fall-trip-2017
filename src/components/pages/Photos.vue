@@ -27,16 +27,32 @@
 
 <script>
 import PhotoCard from '@/components/PhotoCard.vue'
-import PhotoData from '@/photoData.json'
+import Firebase from 'firebase'
+
+// Firebase Config
+const config = {
+  apiKey: 'AIzaSyDO3DTVX8xqOajumFDtPMTLGRJ_GKQThSQ',
+  authDomain: 'fall-trip-2017.firebaseapp.com',
+  databaseURL: 'https://fall-trip-2017.firebaseio.com',
+  projectId: 'fall-trip-2017',
+  storageBucket: 'fall-trip-2017.appspot.com',
+  messagingSenderId: '559691489647'
+}
+
+let app = Firebase.initializeApp(config)
+let db = app.database()
+let photosRef = db.ref()
 
 export default {
   name: 'photos',
+  firebase: {
+    photos: photosRef
+  },
   data () {
     return {
       ireland: true,
       scotland: true,
-      england: true,
-      photos: PhotoData
+      england: true
     }
   },
   methods: {
