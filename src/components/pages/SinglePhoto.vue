@@ -5,7 +5,7 @@
     <div class="container" v-if="!edit">
       <h2>{{ photo.title }}</h2>
 
-      <p>Taken in {{ photo.country }}</p>
+      <p class="country">Taken in {{ photo.country }}</p>
 
       <p>{{ photo.description }}</p>
     </div>
@@ -98,6 +98,12 @@ img {
 .container {
   max-width: 800px;
 }
+
+.country {
+  font-size: 1.5rem;
+  font-style: italic;
+}
+
 input, textarea {
   display: block;
   width: 100%;
