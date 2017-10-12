@@ -13,18 +13,22 @@
 </template>
 
 <script>
-import PhotoData from '@/photoData.json'
+import { fbDatabase } from '@/firebase'
 
 export default {
   name: 'PhotoCard',
+  firebase () {
+    return {
+      photo: {
+        source: fbDatabase.ref(`/${this.id - 1}`),
+        asObject: true
+      }
+    }
+  },
   props: ['id'],
   computed: {
     photoLink () {
       return `/photo/${this.id}`
-    },
-    photo () {
-      const photoId = this.id
-      return PhotoData.filter(photo => photo.id === photoId)[0]
     }
   }
 }
