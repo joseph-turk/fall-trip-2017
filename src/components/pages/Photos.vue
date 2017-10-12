@@ -27,16 +27,20 @@
 
 <script>
 import PhotoCard from '@/components/PhotoCard.vue'
-import PhotoData from '@/photoData.json'
+import { fbDatabase } from '@/firebase'
+
+var photosRef = fbDatabase.ref()
 
 export default {
   name: 'photos',
+  firebase: {
+    photos: photosRef
+  },
   data () {
     return {
       ireland: true,
       scotland: true,
-      england: true,
-      photos: PhotoData
+      england: true
     }
   },
   methods: {
