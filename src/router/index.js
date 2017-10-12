@@ -13,7 +13,8 @@ const routerOptions = [
   { path: '/scotland/edinburgh', component: 'Edinburgh' },
   { path: '/england', component: 'England' },
   { path: '/photos', component: 'Photos' },
-  { path: '/photo/:id', component: 'SinglePhoto' }
+  { path: '/photo/:id', component: 'SinglePhoto' },
+  { path: '/photo/:id/edit', component: 'EditSinglePhoto' }
 ]
 
 const routes = routerOptions.map(route => {
