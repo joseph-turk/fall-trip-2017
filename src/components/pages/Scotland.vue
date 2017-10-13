@@ -1,6 +1,6 @@
 <template>
   <main>
-    <country-hero :image="image" id="2">Scotland</country-hero>
+    <country-hero id="2">Scotland</country-hero>
 
     <country-content>
       We spent most of the trip in Scotland, starting and ending in Edinburgh with a tour of the highlands in between.
@@ -110,11 +110,6 @@ import PageNavButtons from '@/components/PageNavButtons.vue'
 
 export default {
   name: 'scotland',
-  data () {
-    return {
-      image: '/static/scotland-header.jpg'
-    }
-  },
   components: {
     CountryHero,
     CountryContent,

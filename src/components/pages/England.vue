@@ -1,6 +1,6 @@
 <template>
   <main>
-    <country-hero :image="image" id="13">England</country-hero>
+    <country-hero id="13">England</country-hero>
 
     <country-content>
       We ended our trip in England—London, to be specific. We had only one night there, but it was still amazing.
@@ -66,11 +66,6 @@ import PageNavButtons from '@/components/PageNavButtons.vue'
 
 export default {
   name: 'england',
-  data () {
-    return {
-      image: '/static/england-header.jpg'
-    }
-  },
   components: {
     CountryHero,
     CountryContent,

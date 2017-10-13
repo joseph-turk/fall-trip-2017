@@ -1,6 +1,6 @@
 <template>
   <main>
-    <country-hero :image="image" id="9">Ireland</country-hero>
+    <country-hero id="9">Ireland</country-hero>
 
     <country-content>
       We spent three nights in Ireland: one in the Republic of Ireland (Dublin) and then two in Northern Ireland (Belfast). 
@@ -75,11 +75,6 @@ import PageNavButtons from '@/components/PageNavButtons'
 
 export default {
   name: 'ireland',
-  data () {
-    return {
-      image: '/static/dublin-header.png'
-    }
-  },
   components: {
     CountryHero,
     CountryContent,
