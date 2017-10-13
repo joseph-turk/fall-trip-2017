@@ -4,7 +4,10 @@ import Vue from 'vue'
 import VueFire from 'vuefire'
 import App from './App'
 import router from './router'
-require('reset-css/reset.css')
+
+// Global Styles
+import 'reset-css'
+import './assets/styles.css'
 
 Vue.config.productionTip = false
 
