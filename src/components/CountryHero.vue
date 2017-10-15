@@ -1,5 +1,5 @@
 <template>
-  <div class="hero" :style="{ backgroundImage: `url('${photo.smallSrc}')`}">
+  <div class="hero" :style="{ backgroundImage: `url('${photo.mediumSrc}')`}">
     <div class="hero-overlay"></div>
     <div class="hero-container">
       <h2><slot>City</slot></h2>
