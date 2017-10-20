@@ -5,7 +5,7 @@
     </video>
 
     <div class="text-container">
-      <h2>Alison and Joe's Fall Trip</h2>
+      <h2>Ireland and UK Adventure</h2>
 
       <div class="button-container">
         <router-link-button slot="first-button"
