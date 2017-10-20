@@ -18,7 +18,7 @@
     
     <div class="container photo-grid">
       <photo-card v-for="photo in photos"
-        :key="photo.id"
+        :key="photo['.key']"
         :id="photo.id"
         v-show="filterPhoto(photo.country)"/>
     </div>
