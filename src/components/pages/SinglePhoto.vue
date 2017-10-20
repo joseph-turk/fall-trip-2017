@@ -3,9 +3,21 @@
     <img :src="photo.bigSrc">
     
     <div class="container" v-if="!edit">
+      <div class="photo-nav-buttons">
+        <router-link-button :to="previousPhoto.toString()"
+                            v-if="previousPhoto">
+                            Previous Photo</router-link-button>
+
+        <router-link-button :to="nextPhoto.toString()"
+                            v-if="nextPhoto">
+                            Next Photo</router-link-button>
+      </div>
+
       <h2>{{ photo.title }}</h2>
 
       <p class="country">Taken in {{ photo.country }}</p>
+
+      <p class="location">{{ photo.location }}</p>
 
       <p>{{ photo.description }}</p>
     </div>
@@ -14,8 +26,17 @@
       <button @click="editPhoto" v-if="!edit">Edit</button>
       
       <form v-if="edit" v-on:submit.prevent="updatePhoto">
-        <input type="text" v-model="updatedPhoto.title">
+        <input type="text" v-model="updatedPhoto.title" class="title">
         <textarea v-model="updatedPhoto.description" rows="5"></textarea>
+
+        <label for="smallSrc">Small Source</label>
+        <input type="text" id="smallSrc" v-model="updatedPhoto.smallSrc">
+
+        <label for="mediumSrc">Medium Source</label>
+        <input type="text" id="mediumSrc" v-model="updatedPhoto.mediumSrc">
+
+        <label for="bigSrc">Big Source</label>
+        <input type="text" id="bigSrc" v-model="updatedPhoto.bigSrc">
         
         <button type="submit" class="primary">Update</button>
         <button @click="cancelUpdate" type="reset">Close</button>
@@ -31,6 +52,8 @@
                      download>Download Photo</link-button>
       </page-nav-buttons>
     </div>
+
+    
   </main>
 </template>
 
@@ -48,10 +71,6 @@ export default {
         source: fbDatabase.ref(`/${this.$route.params.id - 1}`),
         asObject: true
       },
-      originalPhoto: {
-        source: fbDatabase.ref(`/${this.$route.params.id - 1}`),
-        asObject: true
-      },
       allPhotos: fbDatabase.ref()
     }
   },
@@ -61,8 +80,14 @@ export default {
       updatedPhoto: {}
     }
   },
-  created () {
-    this.updatedPhoto = this.photo
+  computed: {
+    previousPhoto () {
+      return this.photo.id === 1 ? false
+                                 : this.photo.id - 1
+    },
+    nextPhoto () {
+      return this.photo.id === 51 ? false : this.photo.id + 1
+    }
   },
   methods: {
     editPhoto () {
@@ -81,14 +106,16 @@ export default {
       this.updatedPhoto = this.originalPhoto
     }
   },
+  beforeRouteUpdate (to, from, next) {
+    this.$unbind('photo')
+    this.$bindAsObject('photo', fbDatabase.ref(`/${to.params.id - 1}`))
+    next()
+  },
   components: { LinkButton, RouterLinkButton, PageNavButtons }
 }
 </script>
 
 <style scoped>
-main {
-  padding-top: 64px;
-}
 img {
   max-width: 100%;
   max-height: calc(80vh - 64px);
@@ -117,10 +144,13 @@ input, textarea {
 }
 
 input {
-  font-size: 3rem;
-  height: 48px;
+  border-bottom: 1px solid var(--color__primary_text);
+  margin: 0 0 1rem;
+}
+
+input.title {
+  font-size: 2rem;
   font-weight: 700;
-  margin: 0 0 2.5rem;
   padding: 0;
   border: none;
   border-bottom: 2px solid var(--color__primary_text);
@@ -141,6 +171,7 @@ button {
   text-decoration: none;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
   cursor: pointer;
+  margin-top: 1rem;
 }
 
 button:hover {
@@ -153,5 +184,12 @@ button:active {
 
 .primary {
   background-color: var(--color__success);
+}
+
+.photo-nav-buttons {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 1rem;
 }
 </style>
