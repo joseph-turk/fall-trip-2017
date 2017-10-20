@@ -1,6 +1,6 @@
 <template>
   <main>
-    <img :src="photo.bigSrc">
+    <img :src="bigSrc">
     
     <div class="container" v-if="!edit">
       <div class="photo-nav-buttons">
@@ -15,28 +15,24 @@
 
       <h2>{{ photo.title }}</h2>
 
-      <p class="country">Taken in {{ photo.country }}</p>
+      <p class="country">{{photo.location}}, {{ photo.country }}</p>
 
-      <p class="location">{{ photo.location }}</p>
-
-      <p>{{ photo.description }}</p>
+      <p v-if="photo.description !== 'No description yet.'">{{ photo.description }}</p>
     </div>
 
     <div class="container">
       <button @click="editPhoto" v-if="!edit">Edit</button>
       
       <form v-if="edit" v-on:submit.prevent="updatePhoto">
-        <input type="text" v-model="updatedPhoto.title" class="title">
-        <textarea v-model="updatedPhoto.description" rows="5"></textarea>
+        <label for="title">Title</label>
+        <input type="text" v-model="updatedPhoto.title" id="title">
 
-        <label for="smallSrc">Small Source</label>
-        <input type="text" id="smallSrc" v-model="updatedPhoto.smallSrc">
+        <label for="description">Description</label>
+        <textarea v-model="updatedPhoto.description"
+                  id="description" rows="5"></textarea>
 
-        <label for="mediumSrc">Medium Source</label>
-        <input type="text" id="mediumSrc" v-model="updatedPhoto.mediumSrc">
-
-        <label for="bigSrc">Big Source</label>
-        <input type="text" id="bigSrc" v-model="updatedPhoto.bigSrc">
+        <label for="location">Location</label>
+        <input type="text" id="location" v-model="updatedPhoto.location">
         
         <button type="submit" class="primary">Update</button>
         <button @click="cancelUpdate" type="reset">Close</button>
@@ -47,7 +43,7 @@
       <page-nav-buttons>
         <router-link-button slot="first-button" to="/photos">
                             Back to All Photos</router-link-button>
-        <link-button slot="second-button" :href="photo.bigSrc"
+        <link-button slot="second-button" :href="bigSrc"
                      type="primary"
                      download>Download Photo</link-button>
       </page-nav-buttons>
@@ -87,6 +83,18 @@ export default {
     },
     nextPhoto () {
       return this.photo.id === 51 ? false : this.photo.id + 1
+    },
+    bigSrc () {
+      const country = this.photo.country.toLowerCase()
+      return `/static/photos/${country}-large-${this.photo.id}.jpg`
+    },
+    mediumSrc () {
+      const country = this.photo.country.toLowerCase()
+      return `/static/photos/${country}-medium-${this.photo.id}.jpg`
+    },
+    smallSrc () {
+      const country = this.photo.country.toLowerCase()
+      return `/static/photos/${country}-small-${this.photo.id}.jpg`
     }
   },
   methods: {
@@ -148,7 +156,7 @@ input {
   margin: 0 0 1rem;
 }
 
-input.title {
+input#title {
   font-size: 2rem;
   font-weight: 700;
   padding: 0;

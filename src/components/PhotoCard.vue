@@ -1,11 +1,11 @@
 <template>
   <div class="outer">
     <div class="inner">
-      <img :src="photo.smallSrc" :alt="photo.title">
+      <img :src="smallSrc" :alt="photo.title">
       <router-link :to="photoLink">
         <div class="overlay">
           <h3>{{ photo.title }}</h3>
-          <p>Taken in {{ photo.country }}</p>
+          <p>{{ photo.location }}, {{ photo.country }}</p>
         </div>
       </router-link>
     </div>
@@ -29,6 +29,18 @@ export default {
   computed: {
     photoLink () {
       return `/photo/${this.id}`
+    },
+    bigSrc () {
+      const country = this.photo.country.toLowerCase()
+      return `/static/photos/${country}-large-${this.photo.id}.jpg`
+    },
+    mediumSrc () {
+      const country = this.photo.country.toLowerCase()
+      return `/static/photos/${country}-medium-${this.photo.id}.jpg`
+    },
+    smallSrc () {
+      const country = this.photo.country.toLowerCase()
+      return `/static/photos/${country}-small-${this.photo.id}.jpg`
     }
   }
 }
