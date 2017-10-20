@@ -12,7 +12,7 @@
     "id": 2,
     "country": "Ireland",
     "bigSrc": "/static/photos/large/ireland/ireland-large-2.jpg",
-    "mediumSrc": "/static/photos/medium/ireland/ireland-medium-2.jp6",
+    "mediumSrc": "/static/photos/medium/ireland/ireland-medium-2.jpg",
     "smallSrc": "/static/photos/small/ireland/ireland-small-2.jpg",
     "title": "A Short Title for Photo",
     "description": "No description yet."
@@ -447,6 +447,7 @@
     "mediumSrc": "/static/photos/medium/ireland/ireland-medium-50.jpg",
     "smallSrc": "/static/photos/small/ireland/ireland-small-50.jpg",
     "title": "A Short Title for Photo",
+    "location": "",
     "description": "No description yet."
   },
   {
