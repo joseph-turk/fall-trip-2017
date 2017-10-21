@@ -33,7 +33,7 @@
     </country-content>
 
     <country-content>
-      For dinner, we got some very good food at a place run by one of Northern Ireland's top chefs. It was a seafood-focused restuarant that felt much more like somewhere that we would have gone to in DC than the places we ate at in Dublin. After dinner, we went to a pub to have more beers and listen to some Irish music. The band was good, and we got to try some different Irish beers.
+      For dinner, we got some very good food at a place run by one of Northern Ireland's top chefs. It was a seafood-focused restuarant that felt much more like somewhere that we would have gone to in DC than the places we ate at in Dublin. After dinner, we went to a pub to have more pints and listen to some Irish music. The band was good, and we got to try some different Irish beers.
     </country-content>
 
     <country-content>
