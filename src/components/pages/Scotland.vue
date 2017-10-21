@@ -39,7 +39,7 @@
     <photo-with-caption id="77"/>
 
     <country-content>
-      Saturday was also Alison's birthday, so we wanted to do something special for dinner! We found a restaurant was crowded—we took that as a good sign for the food—and looked out on the ocean. It was charmingly Scottish, and the host asked us to take a "wee seat at the bar" when there wasn't a table for us right away. The main courses were good, but the real treat was getting sticky toffee pudding for dessert. It was bitter and sweet and paired perfectly with a local Scotch.
+      Saturday was also Alison's birthday, so we wanted to do something special for dinner! We found a restaurant that was crowded—we took that as a good sign for the food—and looked out on the ocean. It was charmingly Scottish, and the host asked us to take a "wee seat at the bar" when there wasn't a table for us right away. The main courses were good, but the real treat was getting sticky toffee pudding for dessert. It was bitter and sweet and paired perfectly with a local Scotch.
     </country-content>
 
     <country-subheading>Inverness</country-subheading>
