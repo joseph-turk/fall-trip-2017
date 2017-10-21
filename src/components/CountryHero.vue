@@ -1,5 +1,5 @@
 <template>
-  <div class="hero" :style="{ backgroundImage: `url('${photo.mediumSrc}')`}">
+  <div class="hero" :style="{ backgroundImage: `url('${photoSrc}')`}">
     <div class="hero-overlay"></div>
     <div class="hero-container">
       <h2><slot>City</slot></h2>
@@ -17,6 +17,13 @@ export default {
     photo () {
       const photoId = parseInt(this.id)
       return PhotoData.filter(photo => photo.id === photoId)[0]
+    },
+    country () {
+      return this.photo.country.toLowerCase()
+    },
+    photoSrc () {
+      const photoId = parseInt(this.id)
+      return `/static/photos/${this.country}-medium-${photoId}.jpg`
     }
   }
 }

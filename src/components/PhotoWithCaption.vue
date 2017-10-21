@@ -1,7 +1,7 @@
 <template>
   <div class="card-container">
     <div class="card">
-      <img :src="mediumSrc">
+      <img :src="photoSrc">
       <div class="caption">
         <caption>{{ photo.title }}</caption>
       </div>
@@ -10,23 +10,22 @@
 </template>
 
 <script>
-  import { fbDatabase } from '@/firebase'
+  import PhotoData from '@/photoData.json'
 
   export default {
     name: 'photo-with-caption',
     props: ['id'],
-    firebase () {
-      return {
-        photo: {
-          source: fbDatabase.ref(`/${this.id - 1}`),
-          asObject: true
-        }
-      }
-    },
     computed: {
-      mediumSrc () {
-        const country = this.photo.country.toLowerCase()
-        return `/static/photos/${country}-medium-${this.photo.id}.jpg`
+      photo () {
+        const photoId = parseInt(this.id)
+        return PhotoData.filter(photo => photo.id === photoId)[0]
+      },
+      country () {
+        return this.photo.country.toLowerCase()
+      },
+      photoSrc () {
+        const photoId = parseInt(this.id)
+        return `/static/photos/${this.country}-medium-${photoId}.jpg`
       }
     }
   }
