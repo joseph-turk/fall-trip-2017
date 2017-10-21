@@ -51,7 +51,7 @@
     background-color: var(--color__primary);
     color: var(--color__background);
     padding: 1rem 2rem;
-    margin-top: -3px;
+    margin-top: -5px;
     border-radius: 0 0 2px 2px;
   }
 
