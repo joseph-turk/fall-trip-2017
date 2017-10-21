@@ -1,8 +1,6 @@
 <template>
   <main>
-    <div class="image-container">
-      <img :src="mediumSrc">
-    </div>
+    <img :src="mediumSrc">
     
     <div class="container" v-if="!edit">
       <div class="photo-nav-buttons">
@@ -131,12 +129,6 @@ img {
   max-height: calc(80vh - 64px);
   display: block;
   margin: 0 auto 1rem;
-}
-
-.image-container {
-  height: calc(80vh - 64px);
-  display: flex;
-  align-content: center;
 }
 
 .container {
