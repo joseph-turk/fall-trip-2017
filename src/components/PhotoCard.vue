@@ -3,10 +3,7 @@
     <div class="inner">
       <img :src="smallSrc" :alt="photo.title">
       <router-link :to="photoLink">
-        <div class="overlay">
-          <h3>{{ photo.title }}</h3>
-          <p>{{ photo.location }}, {{ photo.country }}</p>
-        </div>
+        <div class="overlay"></div>
       </router-link>
     </div>
   </div>
@@ -84,6 +81,6 @@ img {
 }
 
 .overlay:hover {
-  opacity: 0.8;
+  opacity: 0.3;
 }
 </style>
