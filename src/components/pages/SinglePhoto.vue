@@ -1,6 +1,8 @@
 <template>
   <main>
-    <img :src="bigSrc">
+    <div class="image-container">
+      <img :src="mediumSrc">
+    </div>
     
     <div class="container" v-if="!edit">
       <div class="photo-nav-buttons">
@@ -82,7 +84,7 @@ export default {
                                  : this.photo.id - 1
     },
     nextPhoto () {
-      return this.photo.id === 51 ? false : this.photo.id + 1
+      return this.photo.id === 179 ? false : this.photo.id + 1
     },
     bigSrc () {
       const country = this.photo.country.toLowerCase()
@@ -130,6 +132,13 @@ img {
   display: block;
   margin: 0 auto 1rem;
 }
+
+.image-container {
+  height: calc(80vh - 64px);
+  display: flex;
+  align-content: center;
+}
+
 .container {
   max-width: 800px;
 }
@@ -197,7 +206,11 @@ button:active {
 .photo-nav-buttons {
   display: flex;
   width: 100%;
-  justify-content: space-between;
+  justify-content: center;
   margin-bottom: 1rem;
+}
+
+.photo-nav-buttons *:first-child {
+  margin-right: 1rem;
 }
 </style>
