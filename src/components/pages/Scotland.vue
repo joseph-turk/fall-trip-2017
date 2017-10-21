@@ -8,6 +8,8 @@
 
     <country-subheading>Edinburgh to Oban</country-subheading>
 
+    <city-dates>September 30</city-dates>
+
     <country-content dropCap="true">
       We took a 6:50 AM flight from Belfast to Edinburgh. Our goal was to get to Scotland as cheaply as possible, so we took a budget airline, meaning our plane was a propeller plane rather than a jet, and we had to get on from stairs on the tarmac rather than a jet bridge.
     </country-content>
@@ -44,6 +46,8 @@
 
     <country-subheading>Inverness</country-subheading>
 
+    <city-dates>October 1</city-dates>
+
     <country-content dropCap="true">
       On Sunday, we drove from Oban up to Inverness. Most of the drive was along the shore of Loch Ness, which was beautiful. We took our time and stopped several times to enjoy the scenery. On one of our stops, we pulled into a parking area and found a trail that led down to a river. It wasn't raining, so we explored for a while and took advantage of the nice weather.
     </country-content>
@@ -59,6 +63,8 @@
     </country-content>
 
     <country-subheading>Skye</country-subheading>
+
+    <city-dates>October 2–3</city-dates>
 
     <country-content dropCap="true">
       We drove from Inverness to the Isle of Skye on Monday. Again, the countryside was breathtaking, and we stopped often. It rained off and on all day, but we still made the most of time out of the car.
@@ -96,6 +102,8 @@
 
     <country-subheading>Edinburgh</country-subheading>
 
+    <city-dates>October 4</city-dates>
+
     <country-content dropCap="true">
       We drove from Skye back to Edinburgh on Wednesday. It was the longest day of driving we did the whole trip—about five hours if we hadn't stopped. Just before crossing from the Isle of Skye back to the Scottish mainland, we stopped off to see some highland cows that were close up to the fence at the side of the road.
     </country-content>
@@ -132,6 +140,7 @@
 import CountryHero from '@/components/CountryHero.vue'
 import CountryContent from '@/components/CountryContent.vue'
 import CountrySubheading from '@/components/CountrySubheading.vue'
+import CityDates from '@/components/CityDates.vue'
 import PhotoWithCaption from '@/components/PhotoWithCaption.vue'
 import RouterLinkButton from '@/components/RouterLinkButton.vue'
 import PageNavButtons from '@/components/PageNavButtons.vue'
@@ -142,6 +151,7 @@ export default {
     CountryHero,
     CountryContent,
     CountrySubheading,
+    CityDates,
     PhotoWithCaption,
     RouterLinkButton,
     PageNavButtons

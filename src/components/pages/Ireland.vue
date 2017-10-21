@@ -8,6 +8,8 @@
 
     <country-subheading>Dublin</country-subheading>
 
+    <city-dates>September 27–28</city-dates>
+
     <country-content dropCap="true">
       We flew from Chicago to Dublin on Tuesday evening. Neither of us slept much on the plane, so we were dead tired when we landed on Wednesday morning. Our room wasn't ready at the hostel, though, so we just dropped our bags and headed out to see the city.
     </country-content>
@@ -27,6 +29,8 @@
     </country-content>
 
     <country-subheading>Belfast</country-subheading>
+
+    <city-dates>September 28–30</city-dates>
 
     <country-content dropCap="true">
       We walked around a bit more after we got in to Belfast, including going to check out their public library. The library reminded us a lot of the one in Philadelphia—a really cool old building from the outside (Victorian-era, for the Belfast library), but a surprisingly normal library on the inside.
@@ -77,6 +81,7 @@
 import CountryHero from '@/components/CountryHero'
 import CountryContent from '@/components/CountryContent'
 import CountrySubheading from '@/components/CountrySubheading'
+import CityDates from '@/components/CityDates'
 import PhotoWithCaption from '@/components/PhotoWithCaption'
 import RouterLinkButton from '@/components/RouterLinkButton'
 import PageNavButtons from '@/components/PageNavButtons'
@@ -87,6 +92,7 @@ export default {
     CountryHero,
     CountryContent,
     CountrySubheading,
+    CityDates,
     PhotoWithCaption,
     RouterLinkButton,
     PageNavButtons

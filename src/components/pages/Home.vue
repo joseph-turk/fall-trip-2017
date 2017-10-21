@@ -5,7 +5,7 @@
     </video>
 
     <div class="text-container">
-      <h2>Ireland and UK Adventure</h2>
+      <h2>Ireland and UK Adventure<br>Fall 2017</h2>
 
       <div class="button-container">
         <router-link-button slot="first-button"
@@ -50,6 +50,7 @@ video {
 
 h2 {
   color: var(--color__background);
+  line-height: 1.25;
   text-align: center;
   position: absolute;
   width: 100%;

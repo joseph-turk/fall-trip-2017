@@ -8,6 +8,8 @@
 
     <country-subheading>London</country-subheading>
 
+    <city-dates>October 5</city-dates>
+
     <country-content dropCap="true">
       Thursday, our last real day of the trip, we took a train from Edinburgh down to London. It was a bit of a long ride, but it was nice to not be driving for a change.
     </country-content>
@@ -64,6 +66,7 @@
 import CountryHero from '@/components/CountryHero.vue'
 import CountryContent from '@/components/CountryContent.vue'
 import CountrySubheading from '@/components/CountrySubheading.vue'
+import CityDates from '@/components/CityDates.vue'
 import PhotoWithCaption from '@/components/PhotoWithCaption.vue'
 import RouterLinkButton from '@/components/RouterLinkButton.vue'
 import PageNavButtons from '@/components/PageNavButtons.vue'
@@ -74,6 +77,7 @@ export default {
     CountryHero,
     CountryContent,
     CountrySubheading,
+    CityDates,
     PhotoWithCaption,
     RouterLinkButton,
     PageNavButtons
