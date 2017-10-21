@@ -16,7 +16,7 @@
       </div>
     </div>
     
-    <div class="container photo-grid">
+    <div class="photo-grid">
       <photo-card v-for="photo in photos"
         :key="photo['.key']"
         :id="photo.id"
@@ -101,7 +101,7 @@ button:hover {
 
 .photo-grid {
   column-count: 2;
-  padding-bottom: 2rem;
+  padding: 0 1rem 2rem;
 }
 
 @media (min-width: 700px) {
@@ -113,6 +113,12 @@ button:hover {
 @media (min-width: 1000px) {
   .photo-grid {
     column-count: 4;
+  }
+}
+
+@media (min-width: 1300px) {
+  .photo-grid {
+    column-count: 5;
   }
 }
 </style>
