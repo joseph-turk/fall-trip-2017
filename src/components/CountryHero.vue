@@ -55,7 +55,6 @@ h2 {
   height: 75vh;
   background-size: cover;
   background-color: var(--color__primary_text);
-  background-attachment: fixed;
   background-position: bottom center;
   display: flex;
   align-items: flex-end;
