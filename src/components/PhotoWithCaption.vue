@@ -1,7 +1,7 @@
 <template>
   <div class="card-container">
     <div class="card">
-      <img :src="photo.mediumSrc">
+      <img :src="mediumSrc">
       <div class="caption">
         <caption>{{ photo.title }}</caption>
       </div>
@@ -22,6 +22,12 @@
           asObject: true
         }
       }
+    },
+    computed: {
+      mediumSrc () {
+        const country = this.photo.country.toLowerCase()
+        return `/static/photos/${country}-medium-${this.photo.id}.jpg`
+      }
     }
   }
 </script>
@@ -34,7 +40,6 @@
     max-width: 600px;
     margin: 2rem auto;
     box-sizing: border-box;
-    /* box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25); */
     border-radius: 2px;
   }
 
