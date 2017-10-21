@@ -4,7 +4,7 @@
       <div class="branding">
         <h1>
           <router-link to="/" @click.native="showMenu = false">
-            Fall Trip 2017
+            Alison and Joe
           </router-link>
         </h1>
         
