@@ -38,6 +38,14 @@ h2 {
 @media (min-width: 1000px) {
   h2 {
     font-size: 4rem;
+    margin-bottom: 0.75rem;
+  }
+}
+
+@media (min-width: 1300px) {
+  h2 {
+    font-size: 5rem;
+    margin-bottom: 1rem;
   }
 }
 
@@ -48,6 +56,7 @@ h2 {
   background-size: cover;
   background-color: var(--color__primary_text);
   background-attachment: fixed;
+  background-position: bottom center;
   display: flex;
   align-items: flex-end;
   position: relative;
