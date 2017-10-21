@@ -17,10 +17,10 @@
 
       <p class="country">{{photo.location}}, {{ photo.country }}</p>
 
-      <p v-if="photo.description !== 'No description yet.'">{{ photo.description }}</p>
+      <p v-if="photo.description !== ''">{{ photo.description }}</p>
     </div>
 
-    <div class="container">
+    <div class="container" v-if="false">
       <button @click="editPhoto" v-if="!edit">Edit</button>
       
       <form v-if="edit" v-on:submit.prevent="updatePhoto">
